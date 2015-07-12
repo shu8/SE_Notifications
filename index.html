@@ -24,6 +24,20 @@
 
 <p>This userscript will make HTML5 notifications popup when <em>something</em> happens on a question that you have open in a different tab. This is useful for keeping track of events without having to keep going back to see whether a new comment has been added, or an edit has been made.</p>
 
+<div style='display:none' id='access-token'>
+<h3>
+<a id="acccess-token" class="anchor" href="#access-token" aria-hidden="true"><span class="octicon octicon-link"></span></a>Your acces token</h3>
+
+<p>Your access token:</p>
+<pre id='token'></pre>
+<p>Please enter this by going to your profile and clicking 'freehand circles access-token' at the top :)</p>
+<script> if(window.location.href.split('=').length != 1) {
+  document.getElementById('access-token').style.display = 'inline-block';
+  document.getElementById("token").innerHTML = window.location.href.split('=')[1].split('&')[0]
+}</script>
+
+</div>
+
 <h3>
 <a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h3>
 
